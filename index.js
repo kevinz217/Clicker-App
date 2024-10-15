@@ -13,3 +13,8 @@ function increment() {
     countEl.innerHTML = count
     console.log(countEl)
 }
+
+function save() {
+    entry = document.getElementById("entries")
+    entry.innerHTML = entry.innerHTML + " " + count + " -"
+}
