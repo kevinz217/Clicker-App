@@ -6,15 +6,30 @@
 // use console.log() to log the number of clicks - then test that in the browser’s console
 
 let count = 0; 
+let logo = document.getElementById("logo")
 function increment() {
     count++;
     console.log(count)
     countEl = document.getElementById("count-el")
     countEl.innerHTML = count
     console.log(countEl)
+    logo.setAttribute("width", 55 + count)
+    logo.setAttribute("height", 55 + count)
 }
 
 function save() {
     entry = document.getElementById("entries")
     entry.innerHTML = entry.innerHTML + " " + count + " -"
+}
+
+function remove() {
+    if (count > 0) {
+    count--;
+    console.log(count)
+    countEl = document.getElementById("count-el")
+    countEl.innerHTML = count
+    console.log(countEl)
+    }
+    logo.setAttribute("width", 55 + count)
+    logo.setAttribute("height", 55 + count)
 }
